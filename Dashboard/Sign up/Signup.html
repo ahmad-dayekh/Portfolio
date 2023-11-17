@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../Dashboard/css/dashboard_style.css">
+    <script>
+        function togglePassword() {
+            var passwordInput = document.getElementById('password');
+            var toggle = document.getElementById('toggle-password');
+            var icon = document.getElementById('eye-icon');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.style.backgroundImage = "url('../imgs/hide.png')";
+            } else {
+                passwordInput.type = 'password';
+                icon.style.backgroundImage = "url('../imgs/show.png')";
+            }
+        }
+
+        // Adjust the paths to your actual images
+    </script>
+</head>
+<body class="body" style="background-color: #22223b;">
+    <div class="center-box" style="height: 600px;">
+        <div id="header-txt">Sign Up</div>
+        <form action="../Backend/submit_signup.php" method="post">
+            <div class="form-input">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-input">
+                <label for="fullname">Full Name</label><br>
+                <input type="text" id="fullname" name="fullname">
+            </div>
+            <div class="form-input">
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password">
+                <input type="checkbox" id="toggle-password" class="toggle-checkbox" onclick="togglePassword()">
+                <label for="toggle-password" class="eye-icon" id="eye-icon" style="top: 316px;"></label>
+            </div>
+            <div class="form-input">
+                <label>Sex</label><br>
+                <input style="margin-top: 15px;" type="radio" id="male" name="sex" value="male">
+                <label for="male" style="font-size: 15px;">Male</label>
+                <input type="radio" id="female" name="sex" value="female">
+                <label for="female" style="font-size: 15px;">Female</label>
+            </div>
+            <div class="form-input" style="margin-bottom: 13px;">
+                <label for="dob">Date of Birth</label><br>
+                <input style="margin-top: 15px;" type="date" id="dob" name="dob">
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" class="login-button">Sign Up</button>
+            </div>
+        </form>
+        <div id="signup-prompt" style="margin-top: 50px;">
+            Already have an account? <a id="signup-anchor" href="../index.html">Sign in</a>
+        </div>
+    </div>
+</body>
+</html>

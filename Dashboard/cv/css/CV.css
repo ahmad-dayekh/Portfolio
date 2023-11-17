@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "b";
+    src: url("../fonts/Courier Prime.ttf") format("truetype");
+}
+@font-face {
+    font-family: "a";
+    src: url("../fonts/Courier Prime Bold.ttf") format(truetype);
+}
+#body{
+    margin: 0px;
+    background-color: #c4ded5 ;
+}
+#left-side{
+    width: 33%;
+    float: left;
+    background-color: #3e2464;
+    min-height: 100vh;
+}
+#left-side a img {
+    height: 70px;
+    margin: 1px;
+    width: 70px;
+    transform: rotate(180deg);
+}
+#right-side{
+    width: 67%;
+    float: right;
+    background-color: #c4ded5;
+    min-height:100vh;
+}
+#space1{
+    padding-top: 110px;
+    padding-left: 20px;
+}
+#space2{
+    padding-top: 50px;
+    padding-left: 20px;
+}
+#space3{
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+}
+.images{
+    width: 8%;
+    float: left;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+.line{
+    margin-top: 5px;   
+    margin-bottom: 10px;
+    color: #c4ded5;
+    margin-left: calc(8% + 10px);
+}
+.leftbig{
+    color: #c4ded5;
+    font-size: 34px;
+    font-family: "a";
+    max-width: 100%;
+} 
+.leftsmall{
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+    font-family: "a";
+    color: #c4ded5;
+    margin-left: calc(8% + 10px);
+}
+.leftsmallsmall{
+    font-size: 15px;
+    padding-right: 30px;
+    font-family: "b";
+    color: #c4ded5;
+    margin-left: calc(8% + 10px);
+}
+#name{
+    color: #3e2464;
+    font-family: "a";
+    font-size: 50px;
+    padding-top: 60px;
+    margin-left: 70px;
+    margin-bottom: 35px;
+}
+.rightbig{
+    margin-top: 50px;
+    margin-left: 70px;
+    color: #3e2464;
+    font-size: 34px;
+    font-family: "a";
+}
+.rightbig2{
+    margin-top: 40px;
+    margin-left: 70px;
+    color: #3e2464;
+    font-size: 34px;
+    font-family: "a";
+}
+.line2{
+    margin-left: 70px;
+    margin-bottom: 10px;
+    color: #3e2464;
+}
+.rightsmall{
+    margin-top: 10px;
+    margin-left: 70px;
+    font-family: "a";
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+.rightsmallsmall{
+    margin-top: 10px;
+    margin-left: 70px;
+    font-family: "b";
+    color: #3e2464;
+    padding-right: 20px;
+    font-size: 20px;
+}

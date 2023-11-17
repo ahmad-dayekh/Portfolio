@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'Store Clerk JNL Solid';
+    src: url("../fonts/StoreClerkSolidJNL.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 0px;
+    background-color:#6F764A;
+}
+#row {
+    background-color: #1A1E01;
+    position: fixed;
+    display: block;
+    top: 0;
+    width: 100%;
+}
+#dropdown_menu {
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Store Clerk JNL Solid', sans-serif;
+    font-size: 48px;
+    border: 6px solid;
+    line-height: 50px;
+    border-radius: 13px;
+    color: #1A1E01;
+    padding-left: 10px;
+    padding-right: 20px;
+    background-color: #FEF7EA;
+}
+#dropdown_menu:hover {
+    opacity: 0.95;
+    
+}
+.dropdown_content {
+    cursor: pointer;
+    display: none;
+    font-family: 'Store Clerk JNL Solid', sans-serif;
+    font-size: 30px;
+    padding-right: 20px;
+    top: 100%;
+    margin-left: 1px;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    color: #1A1E01;
+}
+.dropdown_content img{
+    margin: 20px 10px 20px 0px;
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+.dropdown_content a{
+    color: #1A1E01;
+    text-decoration: none;
+}
+.dropdown_content ul{
+    margin: 0px;
+    padding: 0px;
+}
+.dropdown_content li{
+    width: 400px;
+    margin-top: 3px;
+    border-radius: 13px;
+    background-color: #FEF7EA;
+    border: 6px solid;
+    list-style: none;
+    font-family: 'Store Clerk JNL Solid', sans-serif;
+}
+#dropdown_menu:hover .dropdown_content{
+    display: block;
+}
+.dropdown_content li:hover{
+    opacity: 0.95;
+}
+.dropdown_content li:active{
+    opacity: 0.9;
+}
+#main-content {
+    color: #1A1E01;
+    font-family: 'Store Clerk JNL Solid', sans-serif;
+    text-align: center;
+    margin: 300px 50px 0px 50px;
+}
+h1 {
+    font-size: 48px;
+}
+p {
+    font-size: 22px;
+}
+#Arrow_img {
+    margin: 20px 0px 20px 0px;
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+}
+/* the below is for index(login) */
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: #4a4e69;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: 'Store Clerk JNL Solid', sans-serif;
+    color: #1A1E01;
+}
+#header-txt {
+    font-size: 40px;
+    margin: 10px 0 35px 0;
+    font-weight: bold;
+    text-align: center;
+    color: #fffffe;
+}
+.form-input {
+    margin-left: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+label {
+    color: #fff3ec;
+    cursor: pointer;
+}
+input[type="text"],input[type="password"] {
+    font-size: 20px;
+    margin-top: 10px;
+    width: 345px;
+    border-radius: 8px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: #fff3ec;
+    padding: 0 0 0 10px;
+}
+.toggle-checkbox {
+    display: none;
+}
+.eye-icon {
+    position: absolute;
+    right: 35px;
+    top: 223px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('../../imgs/show.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+}
+.toggle-checkbox:checked + .eye-icon {
+    background: url('../../imgs/hide.png') no-repeat center center;
+    background-size: cover;
+}
+.login-button {
+    cursor: pointer;
+    margin-top: 13px;
+    height: 50px;
+    width: 360px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-family: 'Store Clerk JNL Solid', sans-serif;
+    color: #fff3ec;
+    background-color: #22223b;
+    outline: none;
+    font-size: 26px;
+}
+.login-button:hover {
+    opacity: 0.85;
+}
+#signup-prompt {
+    color: #9a8c98;
+    text-align: center;
+    margin-top: 80px;
+}
+#signup-anchor {
+    color: #fffffe;
+    cursor: pointer;
+    text-decoration: none;
+}
+#signup-anchor:hover {
+    color:#4a4e69;
+}
