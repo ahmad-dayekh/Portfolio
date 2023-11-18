@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('Location: ../../index.php');
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +13,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Info</title>
     <link rel="stylesheet" href="../css/contact_style.css">
+    <link rel="stylesheet" href="../../user icon css/user_icon.css">
 </head>
 <body>
     <div class="button-container">
-        <a href="../../Dashboard/html/dashboard.html">
+        <a href="../../Dashboard/html/dashboard.php">
             <img src="../Images/Button.png" id="button-img">
         </a>
     </div>
+    <div class="user-menu-container">
+        <div class="user-icon" onclick="toggleDropdown()"></div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-item">Username: <?php echo $_SESSION['username']; ?></div>
+            <form action="../../Backend/logout.php" method="post" style="display: inline-block;">
+            <input type="submit" value="Logout" class="text-only-button">
+            </form>
+        </div>
+    </div>
+
     <div id="box">
         <div id = "header">
             Contact Me
@@ -58,5 +77,25 @@
     <div class="container6">
         Send Message
     </div>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdownMenu");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.user-icon')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+
+    </script>
 </body>
 </html>

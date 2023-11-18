@@ -1,14 +1,32 @@
+<?php 
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header('Location: ../../index.php');
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Ahmad Al Dayekh's CV</title>
     <link rel="stylesheet" href="../css/CV.css">
+    <link rel="stylesheet" href="../../user icon css/user_icon.css">
 </head>
 
 <body id="body">
+    <div class="user-menu-container"style="margin:1px 1px 0 0">
+        <div class="user-icon" onclick="toggleDropdown()"></div>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <div class="dropdown-item"style="color:black;">Username: <?php echo $_SESSION['username']; ?></div>
+            <form action="../../Backend/logout.php" method="post" style="display: block;text-align:center;">
+                <input type="submit" value="Logout" class="text-only-button" style="display:inline-block;color:black;">
+            </form>
+        </div>
+    </div>
     <div id="left-side">
-        <a href="../../Dashboard/html/dashboard.html">
+        <a href="../../Dashboard/html/dashboard.php">
             <img src="../images/Button.png">
         </a>
         <div id="space1">
@@ -128,6 +146,26 @@
         <div class="rightsmallsmall">
             Placed on the Distinction List for outstanding academic performance.
         </div>
+        <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdownMenu");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.user-icon')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+
+    </script>
 </body>
 
 </html>

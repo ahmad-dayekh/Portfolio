@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'CoreSan-bold';
+    src: url("../../Contact Info/font/CoreSansC-65Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 .Main_Body {
     margin: 0px;
     min-height: 100vh;
@@ -18,9 +24,9 @@
 }
 .Box div {
     margin-top: 15px;
+    font-family: CoreSan-bold;
 }
 
-/* Existing styles */
 
 .HoverImage {
     display: none;

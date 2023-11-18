@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    // If the user is logged in, redirect to the dashboard page
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+        header('Location: ../Dashboard/html/dashboard.php');
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,14 +26,26 @@
                 icon.style.backgroundImage = "url('../imgs/show.png')";
             }
         }
+        function validateForm() {
+            var username = document.getElementById('username').value.trim();
+            var fullname = document.getElementById('fullname').value.trim();
+            var password = document.getElementById('password').value.trim();
+            var sex = document.querySelector('input[name="sex"]:checked');
+            var dob = document.getElementById('dob').value.trim();
 
-        // Adjust the paths to your actual images
+            if (!username || !fullname || !password || !sex || !dob) {
+                alert('Please fill out all fields.');
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+
     </script>
 </head>
 <body class="body" style="background-color: #22223b;">
     <div class="center-box" style="height: 600px;">
         <div id="header-txt">Sign Up</div>
-        <form action="../Backend/submit_signup.php" method="post">
+        <form action="../Backend/submit_signup.php" method="post" onsubmit="return validateForm()">
             <div class="form-input">
                 <label for="username">Username</label><br>
                 <input type="text" id="username" name="username">
@@ -56,7 +76,7 @@
             </div>
         </form>
         <div id="signup-prompt" style="margin-top: 50px;">
-            Already have an account? <a id="signup-anchor" href="../index.html">Sign in</a>
+            Already have an account? <a id="signup-anchor" href="../index.php">Sign in</a>
         </div>
     </div>
 </body>
