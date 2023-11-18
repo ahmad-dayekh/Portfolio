@@ -31,7 +31,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         </a>
         <div id="space1">
             <div>
-                <img class="images" src="../images/Contact.PNG"
+                <img class="images" src="../images/Contact.png"
                     alt="Contact Image">
                 <div class="leftbig">Contact</div>
             </div>
@@ -58,7 +58,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         </div>
         <div id="space2">
             <div>
-                <img class="images" src="../images/Project.PNG"
+                <img class="images" src="../images/Project.png"
                     alt="Project Image">
                 <div class="leftbig">Projects</div>
             </div>
