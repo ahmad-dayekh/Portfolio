@@ -37,7 +37,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     <a href="../../Food Gallery/html/FoodGallery.php">
                         <li><img src="../Images/GALLERY.png">Gallery</li>
                     </a>    
-                    <a href="../../cv/html/CV.">
+                    <a href="../../cv/html/CV.php">
                         <li><img src="../Images/CV.png">CV</li>
                     </a>
                 </ul>
